@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: google_analytics
+    database: ob_content_universe_db
+    schema: google_analytics_schema
+    tables:
+      - name: ga_base_table

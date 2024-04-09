@@ -1,0 +1,9 @@
+.micromamba
+.env
+flows/__pycache__
+flows/.metaflow
+flows/credentials.json
+flows/utils/__pycache__
+notebooks/credentials.json
+notebooks/__pycache__
+notebooks/.ipynb_checkpoints

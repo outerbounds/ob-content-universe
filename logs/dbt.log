@@ -1,0 +1,55 @@
+[0m07:59:02.881139 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10da71250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10daa5610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10daa5c90>]}
+
+
+============================== 07:59:02.883662 | 3577519f-0d33-4a6b-a431-b6311fef36e7 ==============================
+[0m07:59:02.883662 [info ] [MainThread]: Running with dbt=1.7.11
+[0m07:59:02.884131 [debug] [MainThread]: running dbt with arguments {'log_path': 'logs', 'partial_parse': 'True', 'no_print': 'None', 'target_path': 'None', 'debug': 'False', 'introspect': 'True', 'version_check': 'True', 'quiet': 'False', 'invocation_command': 'dbt init', 'use_experimental_parser': 'False', 'log_format': 'default', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'cache_selected_only': 'False', 'static_parser': 'True', 'indirect_selection': 'eager', 'printer_width': '80', 'write_json': 'True', 'send_anonymous_usage_stats': 'True', 'use_colors': 'True', 'warn_error': 'None', 'profiles_dir': '/Users/eddie/.dbt', 'log_cache_events': 'False', 'fail_fast': 'False'}
+[0m07:59:21.786262 [debug] [MainThread]: Starter project path: /Users/eddie/mambaforge/envs/ga_analytics_dbt_snowflake/lib/python3.11/site-packages/dbt/include/starter_project
+[0m07:59:21.794617 [info ] [MainThread]: 
+Your new dbt project "ob_content_universe" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m07:59:21.795252 [info ] [MainThread]: Setting up your profile.
+[0m08:02:46.654103 [info ] [MainThread]: Profile ob_content_universe written to /Users/eddie/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m08:02:46.684063 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 223.82661, "process_user_time": 1.195378, "process_kernel_time": 0.352261, "process_mem_max_rss": "150192128", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m08:02:46.692417 [debug] [MainThread]: Command `dbt init` succeeded at 08:02:46.691995 after 223.85 seconds
+[0m08:02:46.694930 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dac6310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10da54310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10536a7d0>]}
+[0m08:02:46.698706 [debug] [MainThread]: Flushing usage events
+[0m08:06:26.142738 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112997390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1129c5610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1129c6550>]}
+
+
+============================== 08:06:26.144867 | df918d44-3c72-418e-9043-f38c3a687161 ==============================
+[0m08:06:26.144867 [info ] [MainThread]: Running with dbt=1.7.11
+[0m08:06:26.145292 [debug] [MainThread]: running dbt with arguments {'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'warn_error': 'None', 'profiles_dir': '/Users/eddie/.dbt', 'printer_width': '80', 'log_format': 'default', 'debug': 'False', 'no_print': 'None', 'send_anonymous_usage_stats': 'True', 'fail_fast': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'version_check': 'True', 'invocation_command': 'dbt init', 'target_path': 'None', 'write_json': 'True', 'cache_selected_only': 'False', 'quiet': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'partial_parse': 'True', 'static_parser': 'True', 'log_path': 'logs', 'use_colors': 'True'}
+[0m08:06:32.424937 [info ] [MainThread]: A project called ob_content_universe already exists here.
+[0m08:06:32.428639 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 6.316813, "process_user_time": 0.903689, "process_kernel_time": 0.153793, "process_mem_max_rss": "107184128", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m08:06:32.429288 [debug] [MainThread]: Command `dbt init` succeeded at 08:06:32.429158 after 6.32 seconds
+[0m08:06:32.429671 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112958090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10528a7d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1120e0c10>]}
+[0m08:06:32.429974 [debug] [MainThread]: Flushing usage events
+[0m08:15:26.441307 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11185dc10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1118a0e50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1118c6510>]}
+
+
+============================== 08:15:26.443384 | c5e9f877-9feb-4fcf-a454-782e00a5abfd ==============================
+[0m08:15:26.443384 [info ] [MainThread]: Running with dbt=1.7.11
+[0m08:15:26.443786 [debug] [MainThread]: running dbt with arguments {'fail_fast': 'False', 'warn_error': 'None', 'log_cache_events': 'False', 'indirect_selection': 'eager', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'profiles_dir': '/Users/eddie/.dbt', 'partial_parse': 'True', 'log_path': 'logs', 'target_path': 'None', 'static_parser': 'True', 'log_format': 'default', 'invocation_command': 'dbt deps', 'no_print': 'None', 'printer_width': '80', 'debug': 'False', 'cache_selected_only': 'False', 'use_colors': 'True', 'version_check': 'True', 'quiet': 'False', 'introspect': 'True', 'use_experimental_parser': 'False', 'write_json': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m08:15:26.444328 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/eddie/Dev/dbt-snowflake-metaflow/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m08:15:26.445587 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_wall_clock_time": 0.035469625, "process_user_time": 0.894332, "process_kernel_time": 0.151328, "process_mem_max_rss": "106479616", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m08:15:26.445932 [debug] [MainThread]: Command `dbt deps` failed at 08:15:26.445842 after 0.04 seconds
+[0m08:15:26.446169 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111528c90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1118c65d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102d70b10>]}
+[0m08:15:26.446395 [debug] [MainThread]: Flushing usage events

@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: ob_docs_site
+    database: ob_content_universe_db
+    schema: ob_docs_site_schema
+    tables:
+      - name: ob_docs_scrape_base_table

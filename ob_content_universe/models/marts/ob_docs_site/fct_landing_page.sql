@@ -1,0 +1,9 @@
+select
+    DATE_HOUR_MINUTE,
+    LANDING_PAGE,
+    EVENT_NAME,
+    AVERAGE_SESSION_DURATION,
+    ENGAGEMENT_RATE,
+    BOUNCE_RATE,
+    "SESSIONS",
+from {{ ref('ga_base') }}

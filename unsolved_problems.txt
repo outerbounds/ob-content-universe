@@ -1,0 +1,13 @@
+TODOS
+* How to get the "valued-vault" JSON file for GCP Service Account on computer where GA extraction happens? 
+* SECRETS for ob-ga-snowflake
+    * SNOWFLAKE_USER=eddieouterbounds
+    * SNOWFLAKE_PASSWORD=smpCV7n8_eETEj6LceBbGZ
+    * SNOWFLAKE_ACCOUNT_IDENTIFIER=
+    * SNOWFLAKE_WAREHOUSE=google_analytics_wh
+    * SNOWFLAKE_DATABASE=ob_content_universe_db
+    * SNOWFLAKE_SCHEMA=google_analytics_page_view_schema
+    * SNOWFLAKE_OB_CONTENT_UNIVERSE_GA_MF_TASK_ROLE=ob_content_universe_ga_mf_task_role
+    * SNOWFLAKE_OB_CONTENT_UNIVERSE_DBT_ROLE=ob_content_universe_dbt_role
+* SECRETS for ob-google-analytics
+    * ga_sa_credentials_serialized: credentials.json contents
