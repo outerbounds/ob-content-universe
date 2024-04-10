@@ -1,8 +1,8 @@
-from metaflow import FlowSpec, step, pypi, pypi_base, secrets, retry, schedule
+from metaflow import FlowSpec, step, pypi, pypi_base, secrets, retry, kubernetes
 
 GA_START_DATE, GA_END_DATE = "2daysAgo", "yesterday"
 GA_SNOWFLAKE_BASE_TABLE = "ga_base_table"
-GA_SNOWFLAKE_SCHEMA = "google_analytics_schema"
+GA_SNOWFLAKE_SCHEMA = "ob_docs_site_schema"
 SECRET_SRCS = ["ob-ga-sa-creds", "snowflake-ob-content-universe"]
 PYPI_PKGS = {
     "google-analytics-data": "0.18.7",
@@ -21,6 +21,7 @@ class GoogleAnalyticsSnowflakeLoader(FlowSpec):
     @retry(times=3)
     @secrets(sources=SECRET_SRCS)
     @pypi(packages=PYPI_PKGS)
+    @kubernetes
     @step
     def start(self):
         import os

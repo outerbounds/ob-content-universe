@@ -15,11 +15,7 @@ create role if not exists ob_content_universe_mf_task_role;
 create role if not exists ob_content_universe_dbt_role;
 
 -- Create schema if it does not exist
-create schema if not exists ob_content_universe_db.google_analytics_schema;
 create schema if not exists ob_content_universe_db.ob_docs_site_schema;
-
--- Show current grants on warehouse
--- show grants on warehouse google_analytics_wh; 
 
 -- Grant usage on warehouse to roles
 grant usage on warehouse google_analytics_wh to role ob_content_universe_mf_task_role;
@@ -31,9 +27,7 @@ grant usage on warehouse ob_docs_site_wh to role ob_content_universe_dbt_role;
 grant usage, create schema on database ob_content_universe_db to role ob_content_universe_mf_task_role;
 grant usage, create schema on database ob_content_universe_db to role ob_content_universe_dbt_role;
 
--- Grant privileges on the schema 
-grant all on schema ob_content_universe_db.google_analytics_schema to role ob_content_universe_mf_task_role;
-grant all on schema ob_content_universe_db.google_analytics_schema to role ob_content_universe_dbt_role;
+-- Grant privileges on the schema
 grant all on schema ob_content_universe_db.ob_docs_site_schema to role ob_content_universe_mf_task_role;
 grant all on schema ob_content_universe_db.ob_docs_site_schema to role ob_content_universe_dbt_role;
 
@@ -42,6 +36,10 @@ grant select on all tables in database ob_content_universe_db to role ob_content
 grant select on all tables in database ob_content_universe_db to role ob_content_universe_dbt_role;
 grant select on future tables in database ob_content_universe_db to role ob_content_universe_mf_task_role;
 grant select on future tables in database ob_content_universe_db to role ob_content_universe_dbt_role;
+grant select on all views in database ob_content_universe_db to role ob_content_universe_mf_task_role;
+grant select on all views in database ob_content_universe_db to role ob_content_universe_dbt_role;
+grant select on future views in database ob_content_universe_db to role ob_content_universe_mf_task_role;
+grant select on future views in database ob_content_universe_db to role ob_content_universe_dbt_role;
 
 -- Grant roles to users
 grant role ob_content_universe_mf_task_role to user eddieouterbounds;

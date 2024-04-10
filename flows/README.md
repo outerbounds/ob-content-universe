@@ -14,4 +14,17 @@ python daily_ga_sync.py --environment=pypi run
 python daily_ob_docs_site_scrape.py --environment=pypi run
 ```
 
+## Transform in Snowflake, and Embed in LanceDB index
+### Symlink the dbt directory
+```
+ln -s ../ob_content_universe_dbt ./ob_content_universe_dbt 
+```
+
+
+### Run the workflow
+```
+python transform_and_refresh_index.py run
+```
+
 ## Google Analytics Historical Data Fill
+TODO

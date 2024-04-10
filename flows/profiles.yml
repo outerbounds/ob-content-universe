@@ -1,0 +1,13 @@
+ob_content_universe_dbt:
+  outputs:
+    dev:
+      account: "{{ env_var('SNOWFLAKE_ACCOUNT_IDENTIFIER') }}"
+      database: "{{ env_var('SNOWFLAKE_DATABASE') }}"
+      password: "{{ env_var('SNOWFLAKE_PASSWORD') }}"
+      role: "{{ env_var('SNOWFLAKE_OB_CONTENT_UNIVERSE_DBT_ROLE') }}"
+      schema: ob_docs_site_schema
+      threads: 8
+      type: snowflake
+      user: "{{ env_var('SNOWFLAKE_USER') }}"
+      warehouse: "{{ env_var('SNOWFLAKE_WAREHOUSE') }}"
+  target: dev

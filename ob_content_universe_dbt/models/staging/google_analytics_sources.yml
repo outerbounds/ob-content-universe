@@ -3,6 +3,6 @@ version: 2
 sources:
   - name: google_analytics
     database: ob_content_universe_db
-    schema: google_analytics_schema
+    schema: ob_docs_site_schema
     tables:
       - name: ga_base_table

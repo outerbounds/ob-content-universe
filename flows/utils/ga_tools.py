@@ -78,6 +78,7 @@ def extract_data(ga_start_date: str, ga_end_date: str) -> pd.DataFrame:
     for row in tqdm(response.rows):
         d = dict(zip(GA_DIMENSIONS, [v.value for v in row.dimension_values]))
         d |= dict(zip(GA_METRICS, [v.value for v in row.metric_values]))
+        d['fullPageUrl'] = d['fullPageUrl'].startswith('http') and d['fullPageUrl'] or f'https://{d["fullPageUrl"]}'
         data.append(d)
 
     df = pd.DataFrame(data)
@@ -87,12 +88,16 @@ def extract_data(ga_start_date: str, ga_end_date: str) -> pd.DataFrame:
         _start_date = datetime.now() - pd.Timedelta(
             ga_start_date.replace("daysAgo", "days")
         )
+    elif ga_start_date == "yesterday":
+        _start_date = datetime.now() - pd.Timedelta("1 days")
     else:
         _start_date = ga_start_date
     if ga_end_date.endswith("daysAgo"):
         _end_data = datetime.now() - pd.Timedelta(
             ga_end_date.replace("daysAgo", "days")
         )
+    elif ga_end_date == "yesterday":
+        _end_data = datetime.now() - pd.Timedelta("1 days")
     else:
         _end_data = ga_end_date
 

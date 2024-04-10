@@ -2,8 +2,12 @@
 .env
 flows/__pycache__
 flows/.metaflow
+flows/.lancedb
+flows/.lancedb.tar.gz
 flows/credentials.json
 flows/utils/__pycache__
 notebooks/credentials.json
 notebooks/__pycache__
 notebooks/.ipynb_checkpoints
+notebooks/.lancedb
+logs

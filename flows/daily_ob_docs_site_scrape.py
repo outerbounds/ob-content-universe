@@ -1,4 +1,4 @@
-from metaflow import FlowSpec, step, pypi_base, pypi, secrets, retry, schedule
+from metaflow import FlowSpec, step, pypi_base, pypi, secrets, retry, kubernetes
 
 PYPI_PKGS = {
     "requests": "2.31.0",
@@ -21,6 +21,7 @@ class DailyObDocsSiteScrapeLoader(FlowSpec):
     @retry(times=3)
     @secrets(sources=SECRET_SRCS)
     @pypi(packages=PYPI_PKGS)
+    @kubernetes
     @step
     def start(self):
         import os
