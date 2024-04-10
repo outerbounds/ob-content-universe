@@ -7,8 +7,8 @@ SNOWFLAKE_TABLE = "dim_docs_site_ga"
 SNOWFLAKE_SCHEMA = "ob_docs_site_schema"
 SECRET_SRCS = ["snowflake-ob-content-universe", "openai_ob_content_universe"]
 IMAGE = "public.ecr.aws/outerbounds/ob-content-universe-mf-task-image:latest"
-LANCEDB_LOCAL_URI = os.path.join(os.path.expanduser("~"), ".lancedb")
-LANCEDB_CONFIG_DIR = os.path.expanduser("~")
+LANCEDB_LOCAL_URI = ".lancedb"
+LANCEDB_CONFIG_DIR = os.path.expanduser("~/.lancedb")
 
 
 class TransformAndIndex(FlowSpec):
