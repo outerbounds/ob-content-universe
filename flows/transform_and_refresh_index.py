@@ -27,10 +27,6 @@ class TransformAndIndex(FlowSpec):
         from llama_index.core import Document, VectorStoreIndex, StorageContext
         from llama_index.vector_stores.lancedb import LanceDBVectorStore
 
-        # Extract raw data within desired time range from google analytics.
-        # Time range is intended to be fixed in this workflow.
-        # TODO: If instead, you want to make time window dynamic, look at paginate_ga_history_flow.py.
-        # df = extract_data(GA_START_DATE, GA_END_DATE)
         engine = create_engine(
             URL(
                 user=os.environ["SNOWFLAKE_USER"],
