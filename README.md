@@ -1,7 +1,5 @@
 # ELT to RAG with Metaflow, dbt, and Snowflake
-<a href="https://outerbounds.com/blog/reproducible-scalable-computational-biology-systems">
 <img style="display: block; float: left; max-width: 20%; height: auto; margin: auto; float: none!important;" src="static/cover.png"/>
-</a>
 
 ## How to use this repository
 
