@@ -9,7 +9,17 @@ import pandas as pd
 from tqdm import tqdm
 
 OB_DOCS_SITE_SITEMAP = "https://outerbounds.com/sitemap.xml"
-FIELDS = ["title", "content", "url", "date", "author", "tags", "canonical", "alternate", "description"]
+FIELDS = [
+    "title",
+    "content",
+    "url",
+    "date",
+    "author",
+    "tags",
+    "canonical",
+    "alternate",
+    "description",
+]
 
 
 def get_urls_from_sitemap(sitemap_url: str = OB_DOCS_SITE_SITEMAP) -> List[str]:
@@ -39,7 +49,7 @@ def extract_data(urls: List[str]) -> pd.DataFrame:
             description = head.find("meta", attrs={"property": "og:description"}).get(
                 "content"
             )
-        
+
         except AttributeError:
             raise ValueError(f"og:title not found for {url}")
 
@@ -96,5 +106,5 @@ def extract_data(urls: List[str]) -> pd.DataFrame:
         data["tags"].append(tags)
 
     now = datetime.now()
-    data["scrape_date"] = [now] * len(data['title'])
+    data["scrape_date"] = [now] * len(data["title"])
     return pd.DataFrame(data)

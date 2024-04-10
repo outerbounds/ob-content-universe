@@ -41,7 +41,7 @@ class GoogleAnalyticsSnowflakeLoader(FlowSpec):
                 user=os.environ["SNOWFLAKE_USER"],
                 password=os.environ["SNOWFLAKE_PASSWORD"],
                 account=os.environ["SNOWFLAKE_ACCOUNT_IDENTIFIER"],
-                warehouse='google_analytics_wh',
+                warehouse="google_analytics_wh",
                 database=os.environ["SNOWFLAKE_DATABASE"],
                 schema=GA_SNOWFLAKE_SCHEMA,
                 role=os.environ["SNOWFLAKE_OB_CONTENT_UNIVERSE_MF_TASK_ROLE"],

@@ -78,7 +78,11 @@ def extract_data(ga_start_date: str, ga_end_date: str) -> pd.DataFrame:
     for row in tqdm(response.rows):
         d = dict(zip(GA_DIMENSIONS, [v.value for v in row.dimension_values]))
         d |= dict(zip(GA_METRICS, [v.value for v in row.metric_values]))
-        d['fullPageUrl'] = d['fullPageUrl'].startswith('http') and d['fullPageUrl'] or f'https://{d["fullPageUrl"]}'
+        d["fullPageUrl"] = (
+            d["fullPageUrl"].startswith("http")
+            and d["fullPageUrl"]
+            or f'https://{d["fullPageUrl"]}'
+        )
         data.append(d)
 
     df = pd.DataFrame(data)
