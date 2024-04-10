@@ -1,4 +1,4 @@
-from metaflow import FlowSpec, step, secrets, retry, kubernetes, dbt, environment
+from metaflow import FlowSpec, step, secrets, retry, kubernetes, environment, dbt
 import os
 from utils.data_tools import DirectorySyncManager
 
